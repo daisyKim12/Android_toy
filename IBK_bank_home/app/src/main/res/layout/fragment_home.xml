@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="@color/frg_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp">
+        <TextView
+            android:id="@+id/top_txt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="김석진님,"
+            android:textSize="20sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/top_txt2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="다양한 혜택 알람으로 받아보세요!"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_txt1"
+            />
+
+        <ImageView
+            android:id="@+id/send_btn"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/send_btn"
+            app:layout_constraintBottom_toTopOf="@+id/guide_top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
+
+        <ImageView
+            android:id="@+id/top_btn1"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/btn1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide_top"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="12dp"/>
+        <ImageView
+            android:id="@+id/top_btn2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/btn2"
+            app:layout_constraintEnd_toStartOf="@+id/top_btn3"
+            app:layout_constraintStart_toEndOf="@+id/top_btn1"
+            app:layout_constraintTop_toTopOf="@+id/guide_top" />
+        <ImageView
+            android:id="@+id/top_btn3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/btn3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide_top"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="12dp"/>
+
+        <ImageView
+            android:id="@+id/top_btn1_clk"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/btn1_clk"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide_top"
+            android:elevation="3dp"/>
+
+        <ImageView
+            android:id="@+id/top_btn2_clk"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/btn2_clk"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide_top"
+            android:elevation="3dp"/>
+
+        <ImageView
+            android:id="@+id/top_btn3_clk"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="6dp"
+            android:src="@drawable/btn3_clk"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guide_top"
+            android:elevation="3dp"/>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/top_card"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="20dp"
+            android:elevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_btn2"
+            android:layout_marginTop="2dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <TextView
+                    android:id="@+id/cv_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="보통예금(IBK나라사랑통장)[입출금]"
+                    android:textSize="13sp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="18dp"/>
+
+                <TextView
+                    android:id="@+id/cv_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="123-456789-12-123"
+                    android:textSize="17sp"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_txt1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="0dp"/>
+
+                <ImageView
+                    android:id="@+id/cv_more"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:src="@drawable/cv_more"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_margin="18dp"/>
+
+                <TextView
+                    android:id="@+id/cv_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="107,950"
+                    android:textColor="@color/black"
+                    android:textSize="33sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/cv_won"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="원"
+                    android:textColor="#5C5C5C"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cv_money"
+                    app:layout_constraintStart_toEndOf="@+id/cv_money"
+                    android:layout_marginLeft="4dp"/>
+
+
+                <ImageView
+                    android:id="@+id/cv_btn1"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cv_btn1"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginLeft="65dp"/>
+
+                <ImageView
+                    android:id="@+id/cv_btn2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cv_btn2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginRight="65dp"/>
+ <!--
+                     <ImageView
+                         android:id="@+id/cv_nav_img"
+                         android:layout_width=""
+                         android:layout_height=""/>
+                         -->
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/second_card"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="@color/second_cv_bg"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_card"
+            android:layout_marginTop="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="나만의 맞춤메뉴"
+                    android:textSize="19sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="40dp"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/second_card_btn1"
+                    android:layout_width="95dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/card_btn_white"
+                    android:text="전체계좌조회"
+                    app:layout_constraintBottom_toBottomOf="@id/second_card_btn2"
+                    app:layout_constraintEnd_toStartOf="@+id/second_card_btn2"
+                    android:layout_marginEnd="8dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/second_card_btn2"
+                    android:layout_width="95dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/card_btn"
+                    android:text="이벤트/제휴"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginBottom="8dp"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/second_card_btn3"
+                    android:layout_width="95dp"
+                    android:layout_height="36dp"
+                    android:background="@drawable/card_btn_white"
+                    android:text="다른금융조회"
+                    app:layout_constraintBottom_toBottomOf="@id/second_card_btn2"
+                    app:layout_constraintStart_toEndOf="@+id/second_card_btn2"
+                    android:layout_marginStart="8dp"/>
+
+                <ImageButton
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="@drawable/card_btn_white"
+                    android:src="@drawable/cv_second_btn"
+                    app:layout_constraintEnd_toEndOf="@id/second_card_btn3"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="15dp"/>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/second_card"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/home_img3"
+            />
+
+        <ImageView
+            android:id="@+id/img4"
+            android:layout_width="0dp"
+            android:layout_height="175dp"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager"
+            app:layout_constraintLeft_toRightOf="@+id/img3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/home_img4"/>
+        <ImageView
+            android:id="@+id/img5"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toBottomOf="@+id/img3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintWidth_percent="0.33"
+            android:padding="5dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/home_img5"/>
+        <ImageView
+            android:id="@+id/img6"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toTopOf="@+id/img5"
+            app:layout_constraintLeft_toRightOf="@+id/img5"
+            app:layout_constraintWidth_percent="0.33"
+            android:padding="5dp"
+            android:src="@drawable/home_img6"/>
+        <ImageView
+            android:id="@+id/img7"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintTop_toTopOf="@+id/img5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.33"
+            android:padding="5dp"
+            android:src="@drawable/home_img7"/>
+
+
+        <ImageView
+            android:id="@+id/img8"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintTop_toBottomOf="@+id/img6"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="20dp"
+            android:scaleType="centerCrop"
+            android:padding="8dp"
+            android:background="@drawable/card_bg"
+            android:src="@drawable/home_img8"/>
+
+        <ImageView
+            android:id="@+id/img9"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/card_bg"
+            android:src="@drawable/home_img9"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img8"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="85dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

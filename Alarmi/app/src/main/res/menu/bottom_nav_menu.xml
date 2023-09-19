@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_alarm"
+        android:icon="@drawable/bn_alarm"
+        android:title="alarm"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/nav_night"
+        android:icon="@drawable/bn_night"
+        android:title="night"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/nav_stats"
+        android:icon="@drawable/bn_stats"
+        android:title="stats"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/nav_paper"
+        android:icon="@drawable/bn_paper"
+        android:title="paper"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/nav_setting"
+        android:icon="@drawable/bn_setting"
+        android:title="setting"
+        app:showAsAction="always"/>
+
+</menu>

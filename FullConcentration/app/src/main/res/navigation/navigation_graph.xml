@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph.xml"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="org.texchtown.fullconcentration.MainScreenFragment"
+        android:label="fragment_main_screen"
+        tools:layout="@layout/fragment_main_screen" >
+        <action
+            android:id="@+id/actionToPreview"
+            app:destination="@id/previewScreen"
+            app:enterAnim="@android:anim/slide_in_left" />
+        <action
+            android:id="@+id/actionToDialog"
+            app:destination="@id/positiveAffirmationDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/previewScreen"
+        android:name="org.texchtown.fullconcentration.PreviewScreen"
+        android:label="fragment_preview_screen"
+        tools:layout="@layout/fragment_preview_screen" >
+        <action
+            android:id="@+id/actionBackToMain"
+            app:destination="@id/mainScreenFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+
+    <dialog
+        android:id="@+id/positiveAffirmationDialog"
+        android:name="org.texchtown.fullconcentration.PositiveAffirmationDialog">
+        <action
+            android:id="@+id/actionCloseDialog"
+            app:destination="@id/mainScreenFragment" />
+    </dialog>
+</navigation>

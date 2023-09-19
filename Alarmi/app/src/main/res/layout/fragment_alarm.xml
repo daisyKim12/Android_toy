@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AlarmFragment"
+    android:background="@drawable/af_bg"
+    android:paddingBottom="?attr/actionBarSize">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/ab"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/appbar_bg"
+        android:fitsSystemWindows="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tb"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            app:layout_collapseMode="pin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tb_constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tb_txt1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="다음"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@drawable/round_btn"
+                    android:backgroundTint="#709E9E9E"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="8dp"/>
+                <TextView
+                    android:id="@+id/tb_txt2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="1시간 49분 후에 울림"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@+id/tb_txt1"
+                    app:layout_constraintTop_toTopOf="@id/tb_txt1"
+                    android:layout_marginStart="10dp"/>
+
+                <ImageView
+                    android:id="@+id/tb_premium"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/premium_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tb_setting"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/tb_setting"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/bn_setting"
+                    app:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/no_alarm_iv"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:src="@drawable/af_bg_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.428" />
+
+    <TextView
+        android:id="@+id/no_alarm_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알람 없음"
+        android:textColor="#9FFFFFFF"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/no_alarm_iv" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        app:backgroundTint="@color/fab_bg"
+        android:src="@drawable/fab_add"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_alarm"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/fab_alarm"
+        app:tint="@color/fab_bg"
+        app:layout_constraintBottom_toTopOf="@+id/fab_main"
+        app:layout_constraintRight_toRightOf="@+id/fab_main" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_quick"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:padding="10dp"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/fab_bolt"
+        app:tint="@color/fab_bg"
+        app:layout_constraintBottom_toTopOf="@+id/fab_alarm"
+        app:layout_constraintEnd_toEndOf="@id/fab_main" />
+
+    <ImageView
+        android:id="@+id/fab_alarm_txt"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:src="@drawable/fab_alarm_txt"
+        android:visibility="invisible"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_alarm"
+        app:layout_constraintEnd_toStartOf="@+id/fab_alarm"
+        app:layout_constraintTop_toTopOf="@+id/fab_alarm" />
+    <ImageView
+        android:id="@+id/fab_quick_txt"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:src="@drawable/fab_quick_txt"
+        android:visibility="invisible"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_quick"
+        app:layout_constraintEnd_toStartOf="@+id/fab_quick"
+        app:layout_constraintTop_toTopOf="@+id/fab_quick" />
+    <ImageView
+        android:id="@+id/fab_gradient_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fab_bg"
+        android:visibility="invisible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fab_gradient_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

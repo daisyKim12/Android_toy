@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group>
+        <item
+            android:id="@+id/menu_main"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home"/>
+        <item
+            android:id="@+id/menu_textedit"
+            android:icon="@drawable/ic_baseline_edit_24"
+            android:title="@string/menu_textedit"/>
+        <item
+            android:id="@+id/menu_alarm"
+            android:icon="@drawable/ic_baseline_alarm_24"
+            android:title="@string/menu_alarm"/>
+        <item
+            android:id="@+id/menu_app"
+            android:icon="@drawable/ic_baseline_apps_24"
+            android:title="@string/menu_app_allowed"/>
+        <item
+            android:id="@+id/menu_preview"
+            android:icon="@drawable/ic_baseline_preview_24"
+            android:title="@string/menu_preview"/>
+    </group>
+
+</menu>

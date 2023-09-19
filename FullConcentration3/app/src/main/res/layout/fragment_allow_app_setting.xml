@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllowAppSettingFragment"
+    android:background="@color/teal_200">
+
+    <EditText
+        android:id="@+id/search_current_app"
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:gravity="center_vertical"
+        android:backgroundTint="@color/white"
+        android:hint="허용앱을 고르세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/app_list"
+        android:layout_width="380dp"
+        android:layout_height="300dp"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_current_app" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app1"
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E"/>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app2"
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E"/>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app3"
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E"/>
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app4"
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E" />
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E" />
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E" />
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:id="@+id/app8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/ic_baseline_add_circle_outline_24"
+                android:backgroundTint="#807E7E" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    tool:backgroundTint="@color/black"
+    android:backgroundTint="@color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_bg">
+
+        <TextView
+            android:id="@+id/cv_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="10dp"
+            tool:text="한 번만"
+            android:textColor="@color/dialog_blue"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cv_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/cv_repeat"
+            app:layout_constraintTop_toBottomOf="@+id/cv_repeat"
+            android:layout_marginTop="8dp"
+            tool:text="오전" />
+        <TextView
+            android:id="@+id/cv_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="23sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/cv_time1"
+            app:layout_constraintTop_toTopOf="@+id/cv_time1"
+            app:layout_constraintBottom_toBottomOf="@+id/cv_time1"
+            android:layout_marginStart="5dp"
+            tool:text="11:25" />
+
+        <TextView
+            android:id="@+id/cv_mission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            tool:text="미션"
+            android:textColor="@color/black_light"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv_time2"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swt_setting_bg"
+            android:layout_width="42dp"
+            android:layout_height="28dp"
+            android:checked="true"
+            android:thumb="@drawable/thumb"
+            app:track="@drawable/track"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cv_repeat"
+            android:layout_marginEnd="15dp"/>
+
+        <ImageView
+            android:id="@+id/cv_more"
+            android:layout_width="12dp"
+            android:layout_height="20dp"
+            android:src="@drawable/cv_more"
+            app:layout_constraintBottom_toBottomOf="@+id/cv_mission"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

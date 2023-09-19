@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Samplewidget</string>
+    <string name="person_name">김진수</string>
+    <string name="cat_descriptor">고양이</string>
+</resources>

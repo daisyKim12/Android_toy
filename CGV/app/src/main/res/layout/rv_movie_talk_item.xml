@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="12dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="12dp" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/divider"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_thumbnail"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        android:layout_marginTop="14dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/text_color_2"/>
+
+    <TextView
+        android:id="@id/txt_title"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="카운트"
+        android:textColor="@color/text_color_1"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/img_thumbnail"
+        app:layout_constraintStart_toEndOf="@+id/img_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/img_thumbnail"
+        android:layout_marginStart="12dp"
+        android:lines="1"
+        android:scrollHorizontally="false"
+        android:ellipsize="end"/>
+
+    <ImageView
+        android:id="@+id/btn"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:src="@drawable/movie_talk_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/img_thumbnail"
+        app:layout_constraintDimensionRatio="H,1:2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintTop_toTopOf="@+id/img_thumbnail" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/youtube_player_card"
+        android:layout_width="0dp"
+        android:layout_height="190dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintTop_toBottomOf="@id/img_thumbnail"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right"
+        android:layout_marginTop="8dp">
+
+        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+            android:id="@+id/youtube_player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:autoPlay="false"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@id/txt_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="건강하고 희망적이면서 다격감 있다!\n강기영부터 이수지, 김세정까지!\nHOT한 셀럽들 모두 뜰겁게 카운트앓이 중..."
+        android:textColor="@color/text_color_1"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left"
+        app:layout_constraintTop_toBottomOf="@+id/youtube_player_card"
+        android:layout_marginTop="5dp"/>
+
+    <ImageView
+        android:id="@+id/img_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/movie_talk_bottom"
+        app:layout_constraintTop_toBottomOf="@id/txt_detail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,110:12"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

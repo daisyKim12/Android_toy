@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="250dp"
+    android:layout_height="430dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/dialog_week">
+
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="반복"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"/>
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1"
+        android:layout_marginTop="15dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn1"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:background="@drawable/dialog_week_btn_selector"
+        android:text="주중"
+        android:textColor="@drawable/dialog_week_btn_txt_selector"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        app:layout_constraintEnd_toStartOf="@+id/btn2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="2dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn2"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:background="@drawable/dialog_week_btn_selector"
+        android:text="주말"
+        android:textColor="@drawable/dialog_week_btn_txt_selector"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn1"
+        app:layout_constraintTop_toBottomOf="@+id/divider1"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="2dp"/>
+    <TextView
+        android:id="@+id/sun_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="일요일"
+        android:textColor="@color/black_light"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"/>
+
+    <CheckBox
+        android:id="@+id/sun_checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sun_txt"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sun_txt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/mon_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="월요일"
+        android:textColor="@color/black_light"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sun_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"/>
+
+    <CheckBox
+        android:id="@+id/mon_checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mon_txt"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mon_txt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tue_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="화요일"
+        android:textColor="@color/black_light"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mon_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"/>
+
+    <CheckBox
+        android:id="@+id/tue_checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tue_txt"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tue_txt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/wed_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="수요일"
+        android:textColor="@color/black_light"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tue_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"/>
+
+    <CheckBox
+        android:id="@+id/wed_checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/wed_txt"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wed_txt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/thu_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="목요일"
+        android:textColor="@color/black_light"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wed_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"/>
+
+    <CheckBox
+        android:id="@+id/thu_checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/thu_txt"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thu_txt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/fri_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="금요일"
+        android:textColor="@color/black_light"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/thu_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"/>
+
+    <CheckBox
+        android:id="@+id/fri_checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fri_txt"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider7"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fri_txt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/sat_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="토요일"
+        android:textColor="@color/black_light"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fri_txt"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"/>
+
+    <CheckBox
+        android:id="@+id/sat_checkbox"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sat_txt"
+        android:layout_marginEnd="15dp"/>
+
+    <View
+        android:id="@+id/divider8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/dialog_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sat_txt"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:textColor="@color/dialog_blue"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txt1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+    <TextView
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="완료"
+        android:textColor="@color/dialog_blue"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt1"
+        app:layout_constraintTop_toBottomOf="@+id/divider8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
